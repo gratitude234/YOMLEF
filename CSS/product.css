@@ -157,7 +157,7 @@ header {
 /* Flexbox adjustments for intro content */
 .intro-content {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 40px;
