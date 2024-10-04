@@ -201,6 +201,12 @@ header {
       max-width: none;
       border:  1px solid black; /* Remove the max-width restriction */
   }
+  .container {
+    padding: 0;
+  }
+  .intro-features {
+    width: 80%;
+}
 }
 
 .intro-title {
