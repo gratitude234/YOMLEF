@@ -207,6 +207,10 @@ header {
     width:100%;
     padding: 0 20px;
 }
+.intro-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
 }
 
 .intro-title {
