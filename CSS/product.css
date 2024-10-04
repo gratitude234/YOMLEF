@@ -145,8 +145,8 @@ header {
 .intro-section {
   padding: 80px 20px;
   background-color: #f0fdf4; /* Fresh green tint for a light, clean appearance */
-  /* border-bottom: 5px solid #28a745; Bold bottom border to visually separate sections */
 }
+
 
 .container {
   max-width: 1200px;
@@ -186,18 +186,14 @@ header {
       max-width: 600px; 
       padding: 0; /* Remove side padding on larger screens */
   }
+  .intro-section {
+    padding: 80px 20px;
+    background-color: #f0fdf4; /* Fresh green tint for a light, clean appearance */
+  }
 }
 
 /* Full Width and Padding for Mobile Devices */
-@media (max-width: 768px) {
-  .intro-text {
-      width: 100%; /* Full width on mobile */
-      max-width: none; /* Remove max width restriction */
-      text-align: center;
-      padding: 0 15px; /* Padding for mobile */
-      transform: translateY(-20px); /* Move the div up by 20px */
-  }
-}
+
 
 
 /* Full Width on Smaller Devices */
@@ -207,12 +203,17 @@ header {
     max-width: none;
 }
 .container {
-  padding: 0;
+  padding: 0px;
+  border:  1px solid black;
 }
 .intro-features {
   width:100%;
   padding: 0 20px;
 }
+.intro-section {
+  padding: 70px 0px;
+}
+
 }
 
 .intro-title {
