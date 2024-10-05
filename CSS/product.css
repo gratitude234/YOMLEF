@@ -405,7 +405,7 @@ html {
   }
   
   /* Animations */
-  @keyframes fadeIn {
+  /* @keyframes fadeIn {
     0% {
         opacity: 0;
     }
@@ -434,7 +434,7 @@ html {
         transform: translateX(0);
         opacity: 1;
     }
-  }
+  } */
   
   @keyframes bounce {
     0%, 100% {
