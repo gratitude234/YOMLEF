@@ -33,3 +33,52 @@ menuOverlay.addEventListener('click', function() {
     menuOverlay.classList.remove('open'); // Hide overlay
     document.body.style.overflow = ''; // Enable scroll
 });
+
+
+
+
+
+
+
+// Toggle Hamburger Menu
+
+
+hamburger.addEventListener('click', () => {
+    menu.classList.add('active');
+    menuOverlay.classList.add('active');
+});
+
+closeMenu.addEventListener('click', () => {
+    menu.classList.remove('active');
+    menuOverlay.classList.remove('active');
+});
+
+// Close Menu When Clicking Outside
+menuOverlay.addEventListener('click', () => {
+    menu.classList.remove('active');
+    menuOverlay.classList.remove('active');
+});
+
+// Scroll-Based Fade-In Animations
+function handleScrollAnimations() {
+  const elements = document.querySelectorAll('.fade-in');
+
+  const options = {
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  elements.forEach(el => {
+    observer.observe(el);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', handleScrollAnimations);
