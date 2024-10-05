@@ -251,7 +251,7 @@ html {
         rgba(40, 167, 69, 0.5),  
         rgba(40, 167, 69, 0.5)
     ), 
-    url('../Images/YOMLEF KGROUND PICS.jpg') top center/cover no-repeat;
+    url('Images/ORDERS.jpg') top center/cover no-repeat;
     color: white;
     display: flex;
     flex-direction: column;
