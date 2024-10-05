@@ -404,38 +404,6 @@ html {
     line-height: 1.5;
   }
   
-  /* Animations */
-  /* @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-  }
-  
-  @keyframes slideInLeft {
-    0% {
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-  }
-  
-  @keyframes slideInRight {
-    0% {
-        transform: translateX(100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-  } */
-  
   @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
@@ -444,10 +412,6 @@ html {
         transform: translateY(-10px);
     }
   }
-  
-  
-  
-  
   
   /* Variables for easier customization */
   :root {
