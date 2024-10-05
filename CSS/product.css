@@ -404,6 +404,38 @@ html {
     line-height: 1.5;
   }
   
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+  
+  /* @keyframes slideInLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+  }
+  
+  @keyframes slideInRight {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+  } */
+  
   @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
@@ -412,6 +444,10 @@ html {
         transform: translateY(-10px);
     }
   }
+  
+  
+  
+  
   
   /* Variables for easier customization */
   :root {
@@ -571,20 +607,13 @@ html {
       font-size: 1.8rem;
     }
   }
+
+
+
+
   
-  
-  
-  
-  /* General Footer Styles */
-  footer {
-    background-color: #f4f4f4;
-    padding: 50px 0 0px 0px;
-    font-family: Arial, sans-serif;
-    color: #333;
-  }
-  
-  /* Newsletter Section and responsive design */
-  .newsletter {
+/* Newsletter Section and responsive design */
+.newsletter {
     text-align: center;
     margin-bottom: 30px;
     padding: 0 20px; /* Add some padding for smaller screens */
@@ -626,6 +655,44 @@ html {
     cursor: pointer;
     font-size: 1.1rem;
     font-weight: 600;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .newsletter h2 {
+      font-size: 2rem;
+    }
+    .newsletter p {
+      font-size: 14px;
+    }
+    .subscribe-form input {
+      width: 100%; /* Full width for input fields on smaller screens */
+    }
+    .subscribe-form {
+      flex-direction: column; /* Stack form elements vertically */
+      align-items: center;
+    }
+    .subscribe-form button {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .newsletter h2 {
+      font-size: 1.8rem;
+    }
+    .subscribe-form input,
+    .subscribe-form button {
+      width: 100%; /* Full width on smaller devices */
+    }
+  }
+  
+  /* General Footer Styles */
+  footer {
+    background-color: #f4f4f4;
+    padding: 50px 0 0px 0px;
+    font-family: Arial, sans-serif;
+    color: #333;
   }
   
   
