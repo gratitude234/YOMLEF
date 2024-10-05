@@ -298,6 +298,7 @@ nav a:hover {
   .call-to-action {
     text-align: center;
     margin-top: 40px;
+    margin-bottom: 40px;
   }
   
   .call-to-action h3 {
@@ -909,3 +910,55 @@ footer {
 }
 
 
+
+
+
+/* Fade-In Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade-Out Keyframes (Optional) */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* Fade-In Class */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Fade-Out Class (Optional) */
+.fade-out {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+/* Optional: Visible Class for Scroll-Based Animations */
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Ensure smooth transitions for elements */
+.section {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
