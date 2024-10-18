@@ -87,18 +87,15 @@ document.addEventListener('DOMContentLoaded', handleScrollAnimations);
 
 
 
-// Get the modal, button, and close elements
 var modal = document.getElementById("modal");
 var btn = document.querySelector(".btn-primary"); // Get Involved button
 var closeBtn = document.querySelector(".close");
 
-// When the user clicks the Get Involved button, open the modal
 btn.addEventListener('click', function(event) {
     event.preventDefault();
     modal.style.display = "block";
 });
 
-// When the user clicks on the close (x), close the modal
 closeBtn.addEventListener('click', function() {
     modal.style.display = "none";
 });
@@ -113,11 +110,37 @@ window.addEventListener('click', function(event) {
 // You can also handle form submission if needed
 document.getElementById("getInvolvedForm").addEventListener('submit', function(e) {
     e.preventDefault();
-    // Here you would typically handle form submission, e.g., sending the data to a server
     alert("Form submitted successfully!");
     modal.style.display = "none"; // Close modal after submission
 });
 
 
 
+
+
+// Get the modal, button, and close elements
+var modal = document.getElementById("modal");
+var btn = document.querySelector(".btn-primary"); // Get Involved button
+var closeBtn = document.querySelector(".close");
+
+// When the user clicks the Get Involved button, open the modal and disable background scrolling
+btn.addEventListener('click', function(event) {
+    event.preventDefault();
+    modal.style.display = "block";
+    document.body.classList.add("no-scroll"); 
+});
+
+// When the user clicks on the close (x), close the modal and enable scrolling
+closeBtn.addEventListener('click', function() {
+    modal.style.display = "none";
+    document.body.classList.remove("no-scroll"); 
+});
+
+// When the user clicks outside the modal, close it and enable scrolling
+window.addEventListener('click', function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+        document.body.classList.remove("no-scroll"); // Enable scrolling
+    }
+});
 
