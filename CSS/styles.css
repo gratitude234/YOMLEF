@@ -795,7 +795,7 @@ footer {
   }
   .hero {
     padding: 60px 10px;
-    height: 55vh; 
+    height: 75vh; 
     background-size: cover; 
   }
   .hero h1 {
@@ -963,5 +963,310 @@ footer {
 
   .social-icons {
       justify-content: flex-start; /* Align social icons to the left */
+  }
+}
+
+
+
+
+
+/* Modal Styles */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.5); 
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.modal-content form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-content form button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-content form button:hover {
+  background-color: #218838;
+}
+
+
+
+.modal-content form textarea, 
+.modal-content form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.modal-content form textarea {
+    resize: vertical; /* Allows resizing vertically */
+}
+
+.modal-content form select {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Modal Overlay - Darken the background with a smooth transition */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75); /* Darken the background */
+  transition: opacity 0.3s ease-in-out; /* Smooth fade-in effect */
+}
+
+/* Modal Content - Stylish card with shadow and rounded corners */
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 40px 30px;
+  border-radius: 15px; /* Smooth round edges */
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3); /* Drop shadow */
+  animation: slideIn 0.4s ease-out; /* Slide in from the top */
+  position: relative;
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+  from { 
+      transform: translateY(-30px);
+      opacity: 0;
+  }
+  to { 
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Close Button (X) */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #333;
+}
+
+/* Modal Heading */
+.modal-content h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #28a745; /* Use your primary color */
+  text-align: center;
+}
+
+/* Modal Description */
+.modal-content p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Input Fields Styling */
+.modal-content form input, 
+.modal-content form textarea, 
+.modal-content form select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px; /* Rounded corners */
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9; /* Light background for inputs */
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.05); /* Subtle inner shadow */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal-content form input:focus,
+.modal-content form textarea:focus,
+.modal-content form select:focus {
+  border-color: #28a745; /* Change color on focus */
+  box-shadow: 0px 0px 8px rgba(40, 167, 69, 0.2); /* Green glow on focus */
+}
+
+/* Textarea Field */
+.modal-content form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+/* Submit Button */
+.modal-content form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745; /* Primary green */
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content form button:hover {
+  background-color: #218838; /* Darker shade on hover */
+}
+
+/* Add some spacing to form elements */
+.modal-content form input,
+.modal-content form textarea,
+.modal-content form select,
+.modal-content form button {
+  margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+/* Existing styles will remain, and below is the mobile-specific part */
+
+/* Media Query for devices with max width of 600px (Mobile Devices) */
+@media only screen and (max-width: 600px) {
+  /* Modal content adjustments for smaller screens */
+  .modal-content {
+      width: 90%; /* Use a larger width for smaller screens */
+      margin: 30% auto; /* Adjust the margin for better placement */
+      padding: 20px 15px; /* Reduce padding to fit mobile screens */
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  }
+
+  /* Adjust the font sizes */
+  .modal-content h2 {
+      font-size: 22px; /* Slightly smaller heading */
+  }
+
+  .modal-content p {
+      font-size: 14px; /* Smaller paragraph text */
+  }
+
+  /* Input fields should scale down */
+  .modal-content form input, 
+  .modal-content form textarea, 
+  .modal-content form select {
+      padding: 10px; /* Smaller padding for mobile */
+      font-size: 14px; /* Adjust input font size */
+  }
+
+  /* Adjust button size for smaller screens */
+  .modal-content form button {
+      padding: 10px;
+      font-size: 16px; /* Slightly smaller button text */
+  }
+
+  /* Close button should also be smaller */
+  .close {
+      font-size: 24px; /* Reduce size of the close (X) button */
+      top: 10px; /* Adjust position slightly */
+      right: 15px; /* Adjust position slightly */
+  }
+}
+
+/* Adjustments for very small mobile devices (max width of 400px) */
+@media only screen and (max-width: 400px) {
+  .modal-content {
+      margin: 40% auto; /* Move modal lower for very small screens */
+      padding: 15px; /* Reduce padding further */
+  }
+
+  .modal-content h2 {
+      font-size: 20px; /* Smaller heading for very small devices */
+  }
+
+  .modal-content p {
+      font-size: 13px; /* Smaller paragraph text */
+  }
+
+  .modal-content form input, 
+  .modal-content form textarea, 
+  .modal-content form select {
+      padding: 8px; /* Further reduce padding */
+      font-size: 12px; /* Smaller input font */
+  }
+
+  .modal-content form button {
+      padding: 8px;
+      font-size: 14px; /* Smaller button text */
+  }
+
+  /* Close button size and position for very small devices */
+  .close {
+      font-size: 22px; /* Further reduce size */
+      top: 8px;
+      right: 12px;
   }
 }
