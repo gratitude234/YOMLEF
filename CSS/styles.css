@@ -198,7 +198,12 @@ nav a:hover {
 }
 
 .cta-buttons .btn-secondary {
-    background-color:#0062cc;
+    background-color: var(--primary-color);
+}
+
+
+.cta-buttons  .btn-primary {
+  background-color: #0062cc;
 }
 
 .cta-buttons a:hover {
@@ -568,7 +573,7 @@ footer {
 }
 .btn-explore {
   padding: 14px 30px;
-  background-color: #0062cc;
+  background-color: #28a745;
   color: #fff;
   border-radius: 50px; /* Rounded button */
   text-decoration: none;
@@ -578,7 +583,7 @@ footer {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 .btn-explore:hover {
-  background-color: #004a99;
+  background-color: #218838;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced hover */
   transform: translateY(-3px);
 }
@@ -986,7 +991,6 @@ footer {
 
 .modal-content {
   background-color: #fff;
-  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
@@ -1240,7 +1244,7 @@ footer {
 /* Adjustments for very small mobile devices (max width of 400px) */
 @media only screen and (max-width: 400px) {
   .modal-content {
-      margin: 40% auto; /* Move modal lower for very small screens */
+      margin: 2% auto; /* Move modal lower for very small screens */
       padding: 15px; /* Reduce padding further */
   }
 
