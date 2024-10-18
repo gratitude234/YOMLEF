@@ -47,7 +47,7 @@
             <h1>YOUNG MILLIONAIRE LEADERS FORUM</h1>
             <p>Join YOMLEF in shaping a brighter future through leadership training and entrepreneurial opportunities.</p>
             <div class="cta-buttons">
-                <!-- <a href="#" class="btn-primary">Get Involved</a> -->
+                <a href="#" class="btn-primary">Get Involved</a>
                 <a href="Product.html" class="btn-secondary">Explore Our Products</a>
             </div>
         </div>
@@ -165,6 +165,36 @@
             <p>Hours: Mon-Fri 9:00AM - 5:00PM</p>
         </div>        
     </div>
+
+      <!-- Pop-up Form Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Get Involved</h2>
+      <p>Please fill in your details to join us:</p>
+      <form id="getInvolvedForm">
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+          <input type="text" id="phone" name="phone" placeholder="Your Phone Number" required>
+          
+          <!-- Additional Fields -->
+          <input type="text" id="address" name="address" placeholder="Your Address" required>
+          <input type="text" id="occupation" name="occupation" placeholder="Your Occupation" required>
+          <textarea id="reason" name="reason" placeholder="Why do you want to get involved?" rows="4" required></textarea>
+          
+          <label for="availability">Availability:</label>
+          <select id="availability" name="availability" required>
+              <option value="">Select Availability</option>
+              <option value="full-time">Full-time</option>
+              <option value="part-time">Part-time</option>
+              <option value="volunteer">Volunteer</option>
+          </select>
+
+          <button type="submit" class="btn-primary">Submit</button>
+      </form>
+  </div>
+</div>
+
 
     <!-- Copyright Section -->
     <div class="footer-bottom">
