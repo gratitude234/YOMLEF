@@ -198,12 +198,13 @@ nav a:hover {
 }
 
 .cta-buttons .btn-secondary {
-    background-color: var(--primary-color);
+    background-color:#0062cc;
 }
 
 .cta-buttons a:hover {
     background-color: #0062cc;
 }
+
 
 /* About Section Styles */
   .about-section {
@@ -567,7 +568,7 @@ footer {
 }
 .btn-explore {
   padding: 14px 30px;
-  background-color: #28a745;
+  background-color: #0062cc;
   color: #fff;
   border-radius: 50px; /* Rounded button */
   text-decoration: none;
@@ -577,7 +578,7 @@ footer {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 .btn-explore:hover {
-  background-color: #218838;
+  background-color: #004a99;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced hover */
   transform: translateY(-3px);
 }
@@ -1200,7 +1201,7 @@ footer {
   /* Modal content adjustments for smaller screens */
   .modal-content {
       width: 90%; /* Use a larger width for smaller screens */
-      margin: 30% auto; /* Adjust the margin for better placement */
+      margin: 2% auto; /* Adjust the margin for better placement */
       padding: 20px 15px; /* Reduce padding to fit mobile screens */
       box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Softer shadow */
   }
@@ -1239,7 +1240,7 @@ footer {
 /* Adjustments for very small mobile devices (max width of 400px) */
 @media only screen and (max-width: 400px) {
   .modal-content {
-      margin: 1% auto; /* Move modal lower for very small screens */
+      margin: 40% auto; /* Move modal lower for very small screens */
       padding: 15px; /* Reduce padding further */
   }
 
@@ -1269,4 +1270,12 @@ footer {
       top: 8px;
       right: 12px;
   }
+}
+
+
+
+
+/* Prevent background scrolling when the modal is open */
+.no-scroll {
+  overflow: hidden;
 }
