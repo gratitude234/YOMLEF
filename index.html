@@ -47,7 +47,7 @@
             <h1>YOUNG MILLIONAIRE LEADERS FORUM</h1>
             <p>Join YOMLEF in shaping a brighter future through leadership training and entrepreneurial opportunities.</p>
             <div class="cta-buttons">
-                <a href="#" class="btn-primary">Get Involved</a>
+                <a href="#" class="btn-primary">Join Our Sales Team</a>
                 <a href="Product.html" class="btn-secondary">Explore Our Products</a>
             </div>
         </div>
@@ -172,29 +172,45 @@
       <span class="close">&times;</span>
       <h2>Get Involved</h2>
       <p>Please fill in your details to join us:</p>
-      <form id="getInvolvedForm">
-          <input type="text" id="name" name="name" placeholder="Your Name" required>
-          <input type="email" id="email" name="email" placeholder="Your Email" required>
-          <input type="text" id="phone" name="phone" placeholder="Your Phone Number" required>
-          
-          <!-- Additional Fields -->
-          <input type="text" id="address" name="address" placeholder="Your Address" required>
-          <input type="text" id="occupation" name="occupation" placeholder="Your Occupation" required>
-          <textarea id="reason" name="reason" placeholder="Why do you want to get involved?" rows="4" required></textarea>
-          
-          <label for="availability">Availability:</label>
-          <select id="availability" name="availability" required>
-              <option value="">Select Availability</option>
-              <option value="full-time">Full-time</option>
-              <option value="part-time">Part-time</option>
-              <option value="volunteer">Volunteer</option>
+      
+      <form id="getInvolvedForm" action="https://formspree.io/f/mnnqqezr" method="POST">
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <input type="text" id="phone" name="phone" placeholder="Your Phone Number" required>
+        <input type="text" id="address" name="address" placeholder="Your Address" required>
+
+        <label for="experience">Do you have any sales experience?</label>
+          <select id="experience" name="experience" required>
+              <option value="">Select Experience</option>
+              <option value="none">No experience</option>
+              <option value="1-2 years">1-2 years</option>
+              <option value="3-5 years">3-5 years</option>
+              <option value="5+ years">5+ years</option>
           </select>
 
-          <button type="submit" class="btn-primary">Submit</button>
-      </form>
+        <textarea id="reason" name="reason" placeholder="Why do you want to join our sales team?" rows="4" required></textarea>
+        <label for="availability">Availability:</label>
+        <select id="availability" name="availability" required>
+            <option value="">Select Availability</option>
+            <option value="full-time">Full-time</option>
+            <option value="part-time">Part-time</option>
+            <option value="volunteer">Volunteer</option>
+        </select>
+        <button type="submit" class="btn-primary">Submit</button>
+    </form>
   </div>
 </div>
 
+
+<!-- Thank You Modal -->
+<div id="thankYouModal" class="modal">
+  <div class="modal-content">
+    <span class="close-thank-you">&times;</span>
+    <h2>Thank You!</h2>
+    <p>Your submission has been received. We will contact you shortly.</p>
+    <button id="closeModalBtn" class="btn-primary">Close</button>
+  </div>
+</div>
 
     <!-- Copyright Section -->
     <div class="footer-bottom">
