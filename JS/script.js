@@ -177,3 +177,28 @@ document.getElementById('closeModalBtn').addEventListener('click', function() {
 document.querySelector('.close-thank-you').addEventListener('click', function() {
     document.getElementById('thankYouModal').style.display = 'none';
 });
+
+
+
+// Ensure that scroll is re-enabled after closing any modal
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+    document.body.classList.remove("no-scroll"); // Re-enable scroll
+}
+
+// For Thank You Modal close
+document.getElementById('closeModalBtn').addEventListener('click', function() {
+    closeModal('thankYouModal');
+});
+
+// For clicking the "x" button to close Thank You Modal
+document.querySelector('.close-thank-you').addEventListener('click', function() {
+    closeModal('thankYouModal');
+});
+
+// When clicking outside the modal, ensure it's closed and scrolling is re-enabled
+window.addEventListener('click', function(event) {
+    if (event.target == document.getElementById('thankYouModal')) {
+        closeModal('thankYouModal');
+    }
+});
