@@ -180,10 +180,11 @@ nav a:hover {
     color: white;
 }
 
+
 .cta-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
 
 .cta-buttons .btn-primary, .cta-buttons .btn-secondary {
@@ -192,23 +193,34 @@ nav a:hover {
   border-radius: 10px;
   font-size: 1.05rem;
   font-weight: bold;
-  background-color: #28a745;
-  transition: transform 0.3s ease, background 0.3s ease;
+  background-color: var(--primary-color); /* Use the primary color (green) */
+  color: #fff; /* Ensure the text stands out */
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   animation: pulse 2s infinite;
 }
 
+/* Style for primary button (e.g., "Get Involved") */
+.cta-buttons .btn-primary {
+  background-color: var(--primary-color); /* Consistent green color */
+}
+
+/* Style for secondary button (e.g., "Explore Our Products") */
 .cta-buttons .btn-secondary {
-    background-color: var(--primary-color);
+  background-color: var(--secondary-color); /* Slightly darker shade of green */
 }
 
-
-.cta-buttons  .btn-primary {
-  background-color: #0062cc;
+/* Hover effects for buttons */
+.cta-buttons .btn-primary:hover, .cta-buttons .btn-secondary:hover {
+  background-color: var(--hover-color); /* Darker green on hover */
+  transform: translateY(-3px); /* Slight upward movement for feedback */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
 }
 
+/* Remove the blue hover effect */
 .cta-buttons a:hover {
-    background-color: #0062cc;
+  background-color: var(--hover-color); /* Keep hover effect consistent with the theme */
 }
+
 
 
 /* About Section Styles */
@@ -1066,7 +1078,6 @@ footer {
 
 
 
-/* Modal Overlay - Darken the background with a smooth transition */
 .modal {
   display: none; 
   position: fixed;
@@ -1079,7 +1090,6 @@ footer {
   transition: opacity 0.3s ease-in-out; /* Smooth fade-in effect */
 }
 
-/* Modal Content - Stylish card with shadow and rounded corners */
 .modal-content {
   background-color: #fff;
   margin: auto;
@@ -1124,7 +1134,7 @@ footer {
   font-size: 26px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #28a745; /* Use your primary color */
+  color: #28a745; 
   text-align: center;
 }
 
@@ -1147,16 +1157,16 @@ footer {
   border-radius: 8px; /* Rounded corners */
   font-size: 16px;
   color: #333;
-  background-color: #f9f9f9; /* Light background for inputs */
-  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.05); /* Subtle inner shadow */
+  background-color: #f9f9f9; 
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.05); 
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .modal-content form input:focus,
 .modal-content form textarea:focus,
 .modal-content form select:focus {
-  border-color: #28a745; /* Change color on focus */
-  box-shadow: 0px 0px 8px rgba(40, 167, 69, 0.2); /* Green glow on focus */
+  border-color: #28a745; 
+  box-shadow: 0px 0px 8px rgba(40, 167, 69, 0.2); 
 }
 
 /* Textarea Field */
@@ -1169,7 +1179,7 @@ footer {
 .modal-content form button {
   width: 100%;
   padding: 12px;
-  background-color: #28a745; /* Primary green */
+  background-color: #28a745; 
   color: #fff;
   font-size: 18px;
   font-weight: bold;
@@ -1180,10 +1190,9 @@ footer {
 }
 
 .modal-content form button:hover {
-  background-color: #218838; /* Darker shade on hover */
+  background-color: #218838; 
 }
 
-/* Add some spacing to form elements */
 .modal-content form input,
 .modal-content form textarea,
 .modal-content form select,
@@ -1193,84 +1202,69 @@ footer {
 
 
 
-
-
-
-
-
-/* Existing styles will remain, and below is the mobile-specific part */
-
-/* Media Query for devices with max width of 600px (Mobile Devices) */
 @media only screen and (max-width: 600px) {
-  /* Modal content adjustments for smaller screens */
   .modal-content {
-      width: 90%; /* Use a larger width for smaller screens */
-      margin: 3% auto; /* Adjust the margin for better placement */
-      padding: 20px 15px; /* Reduce padding to fit mobile screens */
-      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Softer shadow */
+      width: 90%; 
+      margin: 2% auto; 
+      padding: 20px 15px; 
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); 
   }
 
-  /* Adjust the font sizes */
   .modal-content h2 {
-      font-size: 22px; /* Slightly smaller heading */
+      font-size: 22px; 
   }
 
   .modal-content p {
-      font-size: 14px; /* Smaller paragraph text */
+      font-size: 14px; 
   }
 
-  /* Input fields should scale down */
   .modal-content form input, 
   .modal-content form textarea, 
   .modal-content form select {
-      padding: 10px; /* Smaller padding for mobile */
-      font-size: 14px; /* Adjust input font size */
+      padding: 10px; 
+      font-size: 14px; 
   }
 
-  /* Adjust button size for smaller screens */
   .modal-content form button {
       padding: 10px;
-      font-size: 16px; /* Slightly smaller button text */
+      font-size: 16px; 
   }
 
-  /* Close button should also be smaller */
   .close {
-      font-size: 24px; /* Reduce size of the close (X) button */
-      top: 10px; /* Adjust position slightly */
-      right: 15px; /* Adjust position slightly */
+      font-size: 24px; 
+      top: 10px; 
+      right: 15px; 
   }
 }
 
-/* Adjustments for very small mobile devices (max width of 400px) */
 @media only screen and (max-width: 400px) {
   .modal-content {
-      margin: 3% auto; /* Move modal lower for very small screens */
-      padding: 15px; /* Reduce padding further */
+      margin: 2% auto; 
+      padding: 15px; 
   }
 
   .modal-content h2 {
-      font-size: 20px; /* Smaller heading for very small devices */
+      font-size: 20px; 
   }
 
   .modal-content p {
-      font-size: 13px; /* Smaller paragraph text */
+      font-size: 13px; 
   }
 
   .modal-content form input, 
   .modal-content form textarea, 
   .modal-content form select {
-      padding: 8px; /* Further reduce padding */
-      font-size: 12px; /* Smaller input font */
+      padding: 8px; 
+      font-size: 12px; 
   }
 
   .modal-content form button {
       padding: 8px;
-      font-size: 14px; /* Smaller button text */
+      font-size: 14px; 
   }
 
-  /* Close button size and position for very small devices */
   .close {
-      font-size: 22px; /* Further reduce size */
+      font-size: 22px; 
       top: 8px;
       right: 12px;
   }
@@ -1279,7 +1273,153 @@ footer {
 
 
 
-/* Prevent background scrolling when the modal is open */
 .no-scroll {
   overflow: hidden;
+}
+
+
+
+
+
+
+/* General Thank You Modal Styles */
+#thankYouModal {
+  display: none; 
+  position: fixed; 
+  z-index: 1001; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+  backdrop-filter: blur(5px); 
+  animation: fadeIn 0.4s ease-in-out; 
+}
+
+#thankYouModal .modal-content {
+  background: linear-gradient(145deg, #28a745, #66bb6a); 
+  margin: 10% auto; 
+  padding: 30px;
+  width: 80%;
+  max-width: 450px;
+  border-radius: 15px; 
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
+  text-align: center;
+  animation: slideUp 0.4s ease-in-out; 
+}
+
+#thankYouModal h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  letter-spacing: 1.5px; 
+  margin-bottom: 10px;
+  animation: zoomIn 0.5s ease-in; 
+}
+
+#thankYouModal p {
+  color: #f1f1f1;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.close-thank-you {
+  color: #fff;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-thank-you:hover {
+  color: #ffd700;
+}
+
+#closeModalBtn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: #ffffff;
+  color: #28a745;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+#closeModalBtn:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-3px);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* RESPONSIVE STYLING FOR MOBILE DEVICES */
+@media (max-width: 768px) {
+  #thankYouModal .modal-content {
+      width: 90%; /* Make modal content take more width on smaller screens */
+      padding: 20px; /* Adjust padding for a compact feel */
+  }
+
+  #thankYouModal h2 {
+      font-size: 1.8rem; /* Slightly smaller heading for mobile */
+  }
+
+  #thankYouModal p {
+      font-size: 1rem; /* Make paragraph text a little smaller for readability */
+      margin-top: 15px;
+  }
+
+  #closeModalBtn {
+      padding: 10px 25px; /* Adjust button padding to be more mobile-friendly */
+      font-size: 0.9rem; /* Slightly smaller button text */
+  }
+
+  .close-thank-you {
+      font-size: 1.3rem; /* Decrease size of the close icon for better mobile fit */
+      top: 10px; /* Adjust positioning for mobile */
+      right: 15px;
+  }
+}
+
+/* Small Screen Phones (Below 480px) */
+@media (max-width: 480px) {
+  #thankYouModal .modal-content {
+      width: 95%; /* Even more width on extra small devices */
+      padding: 15px; /* Compact padding */
+  }
+
+  #thankYouModal h2 {
+      font-size: 1.6rem; /* Reduce heading size for smaller screens */
+  }
+
+  #thankYouModal p {
+      font-size: 0.95rem; /* Smaller paragraph text for extra small screens */
+  }
+
+  #closeModalBtn {
+      padding: 8px 20px; /* Compact button padding */
+      font-size: 0.85rem; /* Smaller button text */
+  }
+
+  .close-thank-you {
+      font-size: 1.2rem; /* Adjust close icon for tiny screens */
+  }
 }
