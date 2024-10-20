@@ -144,7 +144,7 @@ document.getElementById('getInvolvedForm').addEventListener('submit', function(e
     var formData = new FormData(this);
 
     // Send the form data via Fetch API to Formspree
-    fetch('https://formspree.io/f/mnnqqezr', {
+    fetch('https://formspree.io/f/mjkvkvry', {
         method: 'POST',
         body: formData,
         headers: {
