@@ -1153,3 +1153,108 @@ html {
       justify-content: flex-start; /* Align social icons to the left */
   }
 }
+
+
+
+
+/* Custom Alert Modal Styles */
+.custom-alert {
+  display: none;
+  position: fixed;
+  z-index: 1002;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+.custom-alert .alert-content {
+  background-color: #28a745;
+  color: #fff;
+  padding: 20px;
+  margin: 10% auto;
+  width: 90%; /* Make the modal wider on mobile */
+  max-width: 400px; /* Still have a max-width on larger screens */
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.4s ease-in-out;
+}
+
+.custom-alert h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+.custom-alert p {
+  margin-bottom: 20px;
+  font-size: 1rem; /* Slightly smaller text for readability on mobile */
+}
+
+#closeAlertBtn {
+  padding: 10px 25px;
+  background-color: #fff;
+  color: #28a745;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#closeAlertBtn:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+@keyframes slideIn {
+  from { transform: translateY(100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Styles for Small Screens */
+@media (max-width: 768px) {
+  .custom-alert .alert-content {
+      width: 90%; /* Increase the modal width on small screens */
+      padding: 15px; /* Less padding to fit smaller screens */
+  }
+  
+  .custom-alert h2 {
+      font-size: 1.5rem; /* Slightly smaller heading for mobile */
+  }
+  
+  .custom-alert p {
+      font-size: 0.95rem; /* Adjust paragraph size for mobile readability */
+  }
+
+  #closeAlertBtn {
+      padding: 8px 20px; /* Smaller button for mobile */
+      font-size: 0.9rem; /* Smaller text size */
+  }
+}
+
+/* Ultra-Small Screens (i.e., mobile phones) */
+@media (max-width: 480px) {
+  .custom-alert .alert-content {
+      width: 95%; /* Almost full width on ultra-small screens */
+      margin: 15% auto;
+      padding: 10px; /* Less padding for better fit */
+  }
+
+  .custom-alert h2 {
+      font-size: 1.3rem; /* Reduce heading size even more */
+  }
+
+  .custom-alert p {
+      font-size: 0.9rem; /* Further reduce paragraph size */
+  }
+
+  #closeAlertBtn {
+      padding: 7px 18px;
+      font-size: 0.85rem;
+  }
+}
+
