@@ -94,25 +94,32 @@
        </div>
        <div class="contact-form">
           <h2>Send Us a Message</h2>
-          <form action="submit_form.php" method="POST">
-             <div class="floating-label">
+          <form id="contactForm" action="https://formspree.io/f/xovqvabg" method="POST">
+            <div class="floating-label">
                 <input type="text" id="name" name="name" required>
                 <label for="name">Your Name</label>
-             </div>
-             <div class="floating-label">
+            </div>
+            <div class="floating-label">
                 <input type="email" id="email" name="email" required>
                 <label for="email">Your Email</label>
-             </div>
-             <div class="floating-label">
+            </div>
+            <div class="floating-label">
                 <input type="text" id="subject" name="subject" required>
                 <label for="subject">Subject</label>
-             </div>
-             <div class="floating-label">
+            </div>
+            <div class="floating-label">
                 <textarea id="message" name="message" rows="5" required></textarea>
                 <label for="message">Your Message</label>
-             </div>
-             <button type="submit" class="submit-btn">Send Message</button>
-          </form>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+        
+        <!-- Success Message -->
+        <div id="successMessage" style="display: none;">Your message has been sent successfully!</div>
+        
+        <!-- Error Message -->
+        <div id="errorMessage" style="display: none;">Oops! Something went wrong, please try again later.</div>
+        
        </div>
     </div>
  </section>
@@ -130,11 +137,11 @@
        <h2>Stay updated</h2>
        <p>Join our community to receive updates on our growing range of products, starting with groundnuts.</p>
 
-       <form class="subscribe-form">
-           <input type="email" placeholder="Your email">
-           <input type="text" placeholder="Your name">
-           <button type="submit">Subscribe</button>
-       </form>
+       <form action="https://formspree.io/f/xanynwkl" method="POST" class="subscribe-form">
+         <input type="email" name="email" placeholder="Your email" required>
+         <input type="text" name="name" placeholder="Your name" required>
+         <button type="submit">Subscribe</button>
+     </form>
    </div>
 
    <!-- Footer Information Section -->
@@ -166,16 +173,26 @@
        <div class="contact-info">
            <h3>Get In Touch</h3>
            <p>Federal University Oye-Ekiti, Oye-Are Road, Oye-Ekiti, Ekiti State, Nigeria</p>
-           <p>Email: yomlefofficial24@gmail.com</p>
+           <p>Email: info@yomlef.org</p>
            <p>Hours: Mon-Fri 9:00AM - 5:00PM</p>
        </div>        
    </div>
+
+
+   <!-- Custom Alert Modal -->
+<div id="alertModal" class="custom-alert">
+   <div class="alert-content">
+     <h2>Thank You for Subscribing!</h2>
+     <p>You’re now part of the YOMLEF community and will receive the latest updates on our products and events.</p>
+     <button id="closeAlertBtn" class="btn-primary">Close</button>
+   </div>
+ </div>
 
    <!-- Copyright Section -->
    <div class="footer-bottom">
        <p>&copy; 2024, YOMLEF - Empowering Future Leaders.</p>
    </div>
 </footer>
-    <script src="JS/script.js"></script>
+    <script src="JS/Contact.js"></script>
 </body>
 </html>
