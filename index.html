@@ -125,9 +125,9 @@
         <h2>Stay updated</h2>
         <p>Join our community to receive updates on our growing range of products, starting with groundnuts.</p>
 
-        <form class="subscribe-form">
-            <input type="email" placeholder="Your email">
-            <input type="text" placeholder="Your name">
+        <form action="https://formspree.io/f/xanynwkl" method="POST" class="subscribe-form">
+            <input type="email" name="email" placeholder="Your email" required>
+            <input type="text" name="name" placeholder="Your name" required>
             <button type="submit">Subscribe</button>
         </form>
     </div>
@@ -211,6 +211,16 @@
     <button id="closeModalBtn" class="btn-primary">Close</button>
   </div>
 </div>
+
+<!-- Custom Alert Modal -->
+<div id="alertModal" class="custom-alert">
+  <div class="alert-content">
+    <h2>Thank You for Subscribing!</h2>
+    <p>You’re now part of the YOMLEF community and will receive the latest updates on our products and events.</p>
+    <button id="closeAlertBtn" class="btn-primary">Close</button>
+  </div>
+</div>
+
 
     <!-- Copyright Section -->
     <div class="footer-bottom">
