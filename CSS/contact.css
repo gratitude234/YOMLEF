@@ -301,3 +301,46 @@
 
 
 
+/* Common Message Styles */
+.message {
+   padding: 15px 20px;
+   width: 100%;
+   max-width: 500px;
+   margin: 20px auto;
+   border-radius: 8px;
+   font-size: 1.1rem;
+   text-align: center;
+   font-family: 'Poppins', sans-serif;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   transition: all 0.3s ease-in-out;
+   opacity: 0; /* Initially hidden */
+   transform: translateY(-20px); /* Slide-in effect */
+}
+
+/* Success Message Styles */
+.success-message {
+   background-color: #28a745;
+   color: #fff;
+   border: 2px solid #28a745;
+   animation: fadeSlideIn 0.5s forwards; /* Fade and slide-in animation */
+}
+
+/* Error Message Styles */
+.error-message {
+   background-color: #dc3545;
+   color: #fff;
+   border: 2px solid #dc3545;
+   animation: fadeSlideIn 0.5s forwards; /* Same animation */
+}
+
+/* Animation for sliding in and fading in */
+@keyframes fadeSlideIn {
+   0% {
+       opacity: 0;
+       transform: translateY(-20px);
+   }
+   100% {
+       opacity: 1;
+       transform: translateY(0);
+   }
+}
