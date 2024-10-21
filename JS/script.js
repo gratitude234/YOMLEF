@@ -137,36 +137,36 @@ window.addEventListener('click', function(event) {
 
 
 
-// document.getElementById('getInvolvedForm').addEventListener('submit', function(event) {
-//     event.preventDefault(); // Prevent the form from submitting the usual way
+document.getElementById('getInvolvedForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting the usual way
 
-//     // Fetch form data
-//     var formData = new FormData(this);
+    // Fetch form data
+    var formData = new FormData(this);
 
-//     // Send the form data via Fetch API to Formspree
-//     fetch('https://formspree.io/f/mqakakbl', {
-//         method: 'POST',
-//         body: formData,
-//         headers: {
-//             'Accept': 'application/json'
-//         }
-//     }).then(function(response) {
-//         if (response.ok) {
-//             // Hide the original modal (form modal)
-//             document.querySelector('.modal').style.display = 'none';
+    // Send the form data via Fetch API to Formspree
+    fetch('https://formspree.io/f/mqakakbl', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(function(response) {
+        if (response.ok) {
+            // Hide the original modal (form modal)
+            document.querySelector('.modal').style.display = 'none';
 
-//             // Clear the form fields
-//             document.getElementById('getInvolvedForm').reset();
+            // Clear the form fields
+            document.getElementById('getInvolvedForm').reset();
 
-//             // Show the Thank You modal
-//             document.getElementById('thankYouModal').style.display = 'block';
-//         } else {
-//             alert('There was a problem with your submission. Please try again.');
-//         }
-//     }).catch(function(error) {
-//         alert('Error submitting the form. Please check your internet connection.');
-//     });
-// });
+            // Show the Thank You modal
+            document.getElementById('thankYouModal').style.display = 'block';
+        } else {
+            alert('There was a problem with your submission. Please try again.');
+        }
+    }).catch(function(error) {
+        alert('Error submitting the form. Please check your internet connection.');
+    });
+});
 
 // Close the Thank You Modal
 document.getElementById('closeModalBtn').addEventListener('click', function() {
