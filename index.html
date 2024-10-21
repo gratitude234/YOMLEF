@@ -173,21 +173,19 @@
       <h2>Get Involved</h2>
       <p>Please fill in your details to join us:</p>
       
-      <form id="getInvolvedForm" action="https://formspree.io/f/mqakakbl" method="POST">
+      <form id="getInvolvedForm" method="POST">
         <input type="text" id="name" name="name" placeholder="Your Name" required>
         <input type="email" id="email" name="email" placeholder="Your Email" required>
         <input type="text" id="phone" name="phone" placeholder="Your Whatsapp Number" required>
         <input type="text" id="address" name="address" placeholder="Your Address" required>
-
         <label for="experience">Do you have any sales experience?</label>
-          <select id="experience" name="experience" required>
-              <option value="">Select Experience</option>
-              <option value="none">No experience</option>
-              <option value="1-2 years">1-2 years</option>
-              <option value="3-5 years">3-5 years</option>
-              <option value="5+ years">5+ years</option>
-          </select>
-
+        <select id="experience" name="experience" required>
+            <option value="">Select Experience</option>
+            <option value="none">No experience</option>
+            <option value="1-2 years">1-2 years</option>
+            <option value="3-5 years">3-5 years</option>
+            <option value="5+ years">5+ years</option>
+        </select>
         <textarea id="reason" name="reason" placeholder="Why do you want to join our sales team?" rows="4" required></textarea>
         <label for="availability">Availability:</label>
         <select id="availability" name="availability" required>
@@ -198,6 +196,7 @@
         </select>
         <button type="submit" class="btn-primary">Submit</button>
     </form>
+
   </div>
 </div>
 
@@ -227,6 +226,39 @@
         <p>&copy; 2024, YOMLEF - Empowering Future Leaders.</p>
     </div>
 </footer>
-    <script src="JS/script.js"></script>
+
+ <!-- Include EmailJS SDK -->
+ <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+ <script type="text/javascript">
+     // Initialize EmailJS with your Public Key (User ID)
+     (function(){
+         emailjs.init("GJ1LQwBwlLj53BbDg"); // Replace YOUR_PUBLIC_KEY with the actual Public Key from EmailJS
+     })();
+ </script>
+
+
+<script type="text/javascript">
+  // Form submission handler
+  document.getElementById('getInvolvedForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Send form data using EmailJS
+      emailjs.sendForm('service_8pzmn95', 'template_8mefjz2', this) // Replace with your actual Service ID and Template ID
+      .then(function(response) {
+          if (response.status === 200) {
+              // Hide the form and display the Thank You modal
+              document.getElementById('getInvolvedForm').style.display = 'none';
+              document.getElementById('thankYouModal').style.display = 'block';
+
+              // Clear the form fields
+              document.getElementById('getInvolvedForm').reset();
+          }
+      }, function(error) {
+          // If there was an error, display the error modal
+          document.getElementById('errorModal').style.display = 'block';
+      });
+  });
+</script>
+    <!-- <script src="JS/script.js"></script> -->
 </body>
 </html>
