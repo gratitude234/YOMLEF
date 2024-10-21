@@ -198,7 +198,7 @@ document.querySelector('.newsletter form').addEventListener('submit', function(e
 
     var formData = new FormData(this);
 
-    fetch('https://formspree.io/f/mjkvkvry', {
+    fetch('https://formspree.io/f/xdkokozg', {
         method: 'POST',
         body: formData,
         headers: {
