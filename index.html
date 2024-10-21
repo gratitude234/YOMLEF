@@ -235,30 +235,6 @@
          emailjs.init("GJ1LQwBwlLj53BbDg"); // Replace YOUR_PUBLIC_KEY with the actual Public Key from EmailJS
      })();
  </script>
-
-
-<script type="text/javascript">
-  // Form submission handler
-  document.getElementById('getInvolvedForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent the default form submission
-
-      // Send form data using EmailJS
-      emailjs.sendForm('service_8pzmn95', 'template_8mefjz2', this) // Replace with your actual Service ID and Template ID
-      .then(function(response) {
-          if (response.status === 200) {
-              // Hide the form and display the Thank You modal
-              document.getElementById('getInvolvedForm').style.display = 'none';
-              document.getElementById('thankYouModal').style.display = 'block';
-
-              // Clear the form fields
-              document.getElementById('getInvolvedForm').reset();
-          }
-      }, function(error) {
-          // If there was an error, display the error modal
-          document.getElementById('errorModal').style.display = 'block';
-      });
-  });
-</script>
     <script src="JS/script.js"></script>
 </body>
 </html>
