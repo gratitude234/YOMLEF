@@ -6,7 +6,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     var formData = new FormData(this);
 
     // Send the form data via AJAX (Fetch API)
-    fetch('https://formspree.io/f/xovqvabg', {
+    fetch('https://formspree.io/f/mqakakbl', {
         method: 'POST',
         body: formData,
         headers: {
