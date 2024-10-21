@@ -137,46 +137,44 @@ window.addEventListener('click', function(event) {
 
 
 
-// document.getElementById('getInvolvedForm').addEventListener('submit', function(event) {
-//     event.preventDefault(); // Prevent the form from submitting the usual way
+// Form submission handler
+document.getElementById('getInvolvedForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
 
-//     // Fetch form data
-//     var formData = new FormData(this);
+    // Send form data using EmailJS
+    emailjs.sendForm('service_8pzmn95', 'template_8mefjz2', this) // Replace with your actual Service ID and Template ID
+    .then(function(response) {
+        if (response.status === 200) {
+            // Hide the form and display the Thank You modal
+            document.getElementById('getInvolvedForm').style.display = 'none';
+            document.getElementById('thankYouModal').style.display = 'block';
 
-//     // Send the form data via Fetch API to Formspree
-//     fetch('https://formspree.io/f/mqakakbl', {
-//         method: 'POST',
-//         body: formData,
-//         headers: {
-//             'Accept': 'application/json'
-//         }
-//     }).then(function(response) {
-//         if (response.ok) {
-//             // Hide the original modal (form modal)
-//             document.querySelector('.modal').style.display = 'none';
+            // Clear the form fields
+            document.getElementById('getInvolvedForm').reset();
+        }
+    }, function(error) {
+        // If there was an error, display the error modal
+        document.getElementById('errorModal').style.display = 'block';
+    });
+});
 
-//             // Clear the form fields
-//             document.getElementById('getInvolvedForm').reset();
+// Close the Thank You modal
+document.querySelector('.close-thank-you').addEventListener('click', function() {
+    document.getElementById('thankYouModal').style.display = 'none';
+    document.getElementById('getInvolvedForm').style.display = 'block'; // Optional: Show the form again if necessary
+});
 
-//             // Show the Thank You modal
-//             document.getElementById('thankYouModal').style.display = 'block';
-//         } else {
-//             alert('There was a problem with your submission. Please try again.');
-//         }
-//     }).catch(function(error) {
-//         alert('Error submitting the form. Please check your internet connection.');
-//     });
-// });
+// Handle the custom alert modal for subscribing
+document.getElementById('closeAlertBtn').addEventListener('click', function() {
+    document.getElementById('alertModal').style.display = 'none';
+});
 
-// // Close the Thank You Modal
-// document.getElementById('closeModalBtn').addEventListener('click', function() {
-//     document.getElementById('thankYouModal').style.display = 'none';
-// });
+// Close Thank You modal with button
+document.getElementById('closeModalBtn').addEventListener('click', function() {
+    document.getElementById('thankYouModal').style.display = 'none';
+});
 
-// // Close the Thank You Modal when clicking the "x" button
-// document.querySelector('.close-thank-you').addEventListener('click', function() {
-//     document.getElementById('thankYouModal').style.display = 'none';
-// });
+
 
 
 
@@ -239,10 +237,6 @@ document.querySelector('.newsletter form').addEventListener('submit', function(e
 document.getElementById('closeAlertBtn').addEventListener('click', function() {
     document.getElementById('alertModal').style.display = 'none';
 });
-
-
-
-
 
 
 
