@@ -125,7 +125,7 @@
         <h2>Stay updated</h2>
         <p>Join our community to receive updates on our growing range of products, starting with groundnuts.</p>
 
-        <form action="https://formspree.io/f/xanynwkl" method="POST" class="subscribe-form">
+        <form action="https://formspree.io/f/mjkvkvry" method="POST" class="subscribe-form">
             <input type="email" name="email" placeholder="Your email" required>
             <input type="text" name="name" placeholder="Your name" required>
             <button type="submit">Subscribe</button>
@@ -173,19 +173,21 @@
       <h2>Get Involved</h2>
       <p>Please fill in your details to join us:</p>
       
-      <form id="getInvolvedForm" method="POST">
+      <form id="getInvolvedForm" action="https://formspree.io/f/mjkvkvry" method="POST">
         <input type="text" id="name" name="name" placeholder="Your Name" required>
         <input type="email" id="email" name="email" placeholder="Your Email" required>
         <input type="text" id="phone" name="phone" placeholder="Your Whatsapp Number" required>
         <input type="text" id="address" name="address" placeholder="Your Address" required>
+
         <label for="experience">Do you have any sales experience?</label>
-        <select id="experience" name="experience" required>
-            <option value="">Select Experience</option>
-            <option value="none">No experience</option>
-            <option value="1-2 years">1-2 years</option>
-            <option value="3-5 years">3-5 years</option>
-            <option value="5+ years">5+ years</option>
-        </select>
+          <select id="experience" name="experience" required>
+              <option value="">Select Experience</option>
+              <option value="none">No experience</option>
+              <option value="1-2 years">1-2 years</option>
+              <option value="3-5 years">3-5 years</option>
+              <option value="5+ years">5+ years</option>
+          </select>
+
         <textarea id="reason" name="reason" placeholder="Why do you want to join our sales team?" rows="4" required></textarea>
         <label for="availability">Availability:</label>
         <select id="availability" name="availability" required>
@@ -196,7 +198,6 @@
         </select>
         <button type="submit" class="btn-primary">Submit</button>
     </form>
-
   </div>
 </div>
 
@@ -221,20 +222,22 @@
 </div>
 
 
+
+<!-- Include EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+    // Initialize EmailJS with your Public Key (User ID)
+    (function(){
+        emailjs.init("GJ1LQwBwlLj53BbDg"); // Replace YOUR_PUBLIC_KEY with the actual Public Key from EmailJS
+    })();
+</script>
+
+
     <!-- Copyright Section -->
     <div class="footer-bottom">
         <p>&copy; 2024, YOMLEF - Empowering Future Leaders.</p>
     </div>
 </footer>
-
- <!-- Include EmailJS SDK -->
- <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
- <script type="text/javascript">
-     // Initialize EmailJS with your Public Key (User ID)
-     (function(){
-         emailjs.init("GJ1LQwBwlLj53BbDg"); // Replace YOUR_PUBLIC_KEY with the actual Public Key from EmailJS
-     })();
- </script>
     <script src="JS/script.js"></script>
 </body>
 </html>
